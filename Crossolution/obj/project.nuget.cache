@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EDKn1arO2aP0xLd2BNMRYUMT2FVKgwWTDxsvsCIw0YKL2T3AlxVZbNReg7Q4I0dc6FxHV/0VjflpLSpboFWUgw==",
+  "dgSpecHash": "4CfTvs72Iprk5aB/4ycza3LHYwPCrpxga0bfTpGa7ZFW88w+HxF+K5MO6u8jQsbdSUIvOl+pcRJMLcka4tCt4A==",
   "success": true,
   "projectFilePath": "C:\\Crossolution\\Crossolution\\Crossolution\\Crossolution.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\eduar\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

@@ -45,3 +45,21 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Crossolution/Crossolution/Crossolution/Views/Cadastro.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Cadastro.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Cadastro.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Cadastro.xaml
+
+[C:/Crossolution/Crossolution/Crossolution/Views/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Login.xaml
+
+[C:/Crossolution/Crossolution/Crossolution/Views/Semaforos.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Semaforos.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Semaforos.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Semaforos.xaml

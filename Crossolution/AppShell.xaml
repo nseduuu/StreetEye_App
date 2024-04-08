@@ -4,12 +4,26 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Crossolution"
-    Shell.FlyoutBehavior="Disabled"
+    xmlns:Views="clr-namespace:Crossolution.Views"
+    BackgroundColor="White"
+    Shell.FlyoutBehavior="Flyout"
     Title="Crossolution">
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    <ShellContent 
+        Title="Cadastro"
+        ContentTemplate="{DataTemplate Views:Cadastro}"
+        Route="Cadastro"/>
+    <ShellContent 
+        Title="Login"
+        ContentTemplate="{DataTemplate Views:Login}"
+        Route="Login"/>
+    <ShellContent
+        Title="Semaforos"
+        ContentTemplate="{DataTemplate Views:Semaforos}"
+        Route="Semaforo"/>
 
 </Shell>
