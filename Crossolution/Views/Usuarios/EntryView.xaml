@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crossolution.Views.Usuarios.EntryView"
+             Title="EntryView"
+             BackgroundColor="WhiteSmoke">
+    
+    <VerticalStackLayout Padding="25" Spacing="30" HorizontalOptions="Center">
+
+        <Image
+        Source="crossolution.png"
+        Margin="0,100,0,0"
+        HeightRequest="150"  
+        WidthRequest="150"/>
+
+        <VerticalStackLayout>
+            <Label
+            Text="Crossolution"
+            FontSize="Medium"
+            TextColor="Black"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+        </VerticalStackLayout>
+
+        <StackLayout Orientation="Vertical">
+            <Button
+            x:Name="CounterBtn"
+            BackgroundColor="Black"
+            TextColor="White"
+            Padding="60,0,60,0"
+            Text="Cadastrar"
+            Command="{Binding DirecionarCadastroCommand}"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical">
+            <Button
+            x:Name="Login"
+            BackgroundColor="WhiteSmoke"
+            TextColor="Black"
+            Padding="60,0,60,0"
+            Text="Fazer login"
+            Command="{Binding DirecionarLoginCommand}"
+            HorizontalOptions="Center" />
+        </StackLayout>
+
+    </VerticalStackLayout>
+    
+</ContentPage>

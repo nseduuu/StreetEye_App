@@ -42,20 +42,26 @@ build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Resources.Sty
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Crossolution/Crossolution/Crossolution/Views/Cadastro.xaml]
+[C:/Crossolution/Crossolution/Crossolution/Views/Semaforos/SemaforoView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Cadastro.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Cadastro.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Cadastro.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Semaforos.SemaforoView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Semaforos\SemaforoView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Semaforos\SemaforoView.xaml
 
-[C:/Crossolution/Crossolution/Crossolution/Views/Login.xaml]
+[C:/Crossolution/Crossolution/Crossolution/Views/Usuarios/CadastroView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Login.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Login.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Login.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Usuarios.CadastroView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Usuarios\CadastroView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Usuarios\CadastroView.xaml
 
-[C:/Crossolution/Crossolution/Crossolution/Views/Semaforos.xaml]
+[C:/Crossolution/Crossolution/Crossolution/Views/Usuarios/EntryView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Semaforos.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Semaforos.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Semaforos.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Usuarios.EntryView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Usuarios\EntryView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Usuarios\EntryView.xaml
+
+[C:/Crossolution/Crossolution/Crossolution/Views/Usuarios/LoginView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Usuarios.LoginView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Usuarios\LoginView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Usuarios\LoginView.xaml

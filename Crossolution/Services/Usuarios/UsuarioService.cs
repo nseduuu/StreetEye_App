@@ -1,18 +1,16 @@
 ﻿using Crossolution.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Crossolution.ViewModels;
+using System.Windows.Input;
 
 namespace Crossolution.Services.Usuarios
 {
     public class UsuarioService : Request
     {
         private readonly Request _request;
-        private const string apiUrLBase = "http://xyz.somee.com/CrossolutionApi/Usuarios";
 
-        //ctor + TAB -> atalho para contrutor
+        private const string apiUrlBase = "streeteye-api.azurewebsites.net/Usuarios";
+
+        //ctor + TAB: Atalho para criar um construtor
         public UsuarioService()
         {
             _request = new Request();
@@ -21,7 +19,7 @@ namespace Crossolution.Services.Usuarios
         public async Task<Usuario> PostRegistrarUsuarioAsync(Usuario u)
         {
             string urlComplementar = "/Registrar";
-            u.IdUsuario = await _request.PostReturnIntAsync(apiUrLBase + urlComplementar, u);
+            u.IdUsuario = await _request.PostReturnIntAsync(apiUrlBase + urlComplementar, u, string.Empty);
 
             return u;
         }
@@ -29,10 +27,14 @@ namespace Crossolution.Services.Usuarios
         public async Task<Usuario> PostAutenticarUsuarioAsync(Usuario u)
         {
             string urlComplementar = "/Autenticar";
-            u = await _request.PostAsync(apiUrLBase + urlComplementar, u, string.Empty);
+            u = await _request.PostAsync(apiUrlBase + urlComplementar, u, string.Empty);
 
             return u;
         }
+
+
+
+
 
     }
 }

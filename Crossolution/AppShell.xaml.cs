@@ -8,9 +8,8 @@ namespace Crossolution
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(Cadastro), typeof(Cadastro));
-            Routing.RegisterRoute(nameof(Login), typeof(Login));
-            Routing.RegisterRoute(nameof(Semaforos), typeof(Semaforos));
+            Routing.RegisterRoute(nameof(Views.Usuarios.CadastroView), typeof(Views.Usuarios.CadastroView));
+            Routing.RegisterRoute(nameof(Views.Usuarios.LoginView), typeof(Views.Usuarios.LoginView));
         }
     }
 }

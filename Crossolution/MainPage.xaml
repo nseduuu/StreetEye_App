@@ -4,50 +4,11 @@
              x:Class="Crossolution.MainPage"
              BackgroundColor="White">
 
-    <ScrollView >
-        <VerticalStackLayout
-            Padding="25"
-            Spacing="30">
-
-            <Image
-                Source="crossolution.png"
-                Margin="0,100,0,0"
-                HeightRequest="150"  
-                WidthRequest="150"
-                SemanticProperties.Description="Imagem da empresa Crossolution" />
-
-            <VerticalStackLayout>
-                <Label
-                Text="Crossolution"
-                FontSize="Medium"
-                TextColor="Black"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
-            </VerticalStackLayout>
-
-            <StackLayout Orientation="Vertical">
-                <Button
-                x:Name="CounterBtn"
-                BackgroundColor="Black"
-                TextColor="White"
-                Padding="60,0,60,0"
-                Text="Cadastrar" 
-                Clicked="CadastroClicked"
-                HorizontalOptions="Center" />
-            </StackLayout>
-
-            <StackLayout Orientation="Vertical">
-                <Button
-                x:Name="CounterBtn2"
-            BackgroundColor="WhiteSmoke"
-            TextColor="Black"
-            Padding="60,0,60,0"
-            Text="Fazer login" 
-            Clicked="LoginClicked"
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
             HorizontalOptions="Center" />
-            </StackLayout>
-
-        </VerticalStackLayout>
-    </ScrollView>
+    </VerticalStackLayout>
 
 </ContentPage>

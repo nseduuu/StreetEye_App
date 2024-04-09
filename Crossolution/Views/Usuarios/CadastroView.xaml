@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crossolution.Views.Usuarios.CadastroView"
+             BackgroundColor="White"
+             Title="CadastroView">
+
+    <ScrollView>
+    <VerticalStackLayout>
+
+        <StackLayout Padding="25" Spacing="30" HorizontalOptions="Center">
+
+            <Image
+            Source="crossolution.png"
+            HeightRequest="150"  
+            WidthRequest="150"/>
+
+            <VerticalStackLayout>
+                <Label
+                Text="Crossolution"
+                FontSize="Medium"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            </VerticalStackLayout>
+
+                <Entry Placeholder="ex: Eduardo Basseto" TextColor="Black" />
+
+                <Entry Placeholder="ex: lucasfelix@crossolution" TextColor="Black" Text="{Binding Login}"/>
+
+                <Entry Placeholder=" ******** " TextColor="Black" Text="{Binding Senha}"/>
+
+            <Label Text=" Estou de acordo com os termos e politica" TextColor="Black"/>
+            
+            <Button
+            x:Name="Cadastrar"
+            BackgroundColor="Black"
+            Padding="60,0,60,0"
+            Text="Cadastrar" 
+            TextColor="White"
+            Command="{Binding RegistrarCommand}"
+            HorizontalOptions="Center" />
+
+                <HorizontalStackLayout 
+                HorizontalOptions="Center" 
+                Spacing="20" Margin="30">
+                    <Label Text="Já tem uma conta?" TextColor="Black"></Label>
+                    <Label Text="Login" TextColor="Black" FontAttributes="Bold"></Label>
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding DirecionarLoginCommand}">
+                        </TapGestureRecognizer>
+                    </HorizontalStackLayout.GestureRecognizers>
+                </HorizontalStackLayout>
+
+            </StackLayout>
+        
+    </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>
