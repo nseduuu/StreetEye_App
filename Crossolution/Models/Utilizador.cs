@@ -7,21 +7,20 @@ using System.Threading.Tasks;
 namespace Crossolution.Models
 {
     public class Utilizador : Usuario
-    { 
-        public int IdTipoUtilizador { get; set; }
-        public string DsTipoUtilizador { get; set; } = string.Empty;
-        public string NmUtilizador { get; set; } = string.Empty;
-        public DateTime DnUtilizador  { get; set; }
-        public int ClUtilizador { get; set; }
-        public string EnUtilizador { get; set; } = string.Empty;
-        public string NeUtilizador { get; set; } = string.Empty;
-        public string CmUtilizador { get; set; } = string.Empty;
-        public string BaUtilizador { get; set; } = string.Empty;
-        public string CiUtilizador { get; set; } = string.Empty;
-        public string UfUtilizador { get; set; } = string.Empty;
-        public string CeUtilizador { get; set; } = string.Empty;
-        public string LtUtilizador { get; set; } = string.Empty;
-        public string Lgilizador { get; set; } = string.Empty;
+    {
+        public int Id { get; set; }
+        public string Nome { get; set; } = string.Empty;
+        public DateTime DataNascimento { get; set; }
+        public string Telefone { get; set; } = string.Empty;
+        public string Endereco { get; set; } = string.Empty;
+        public string NumeroEndereco { get; set; } = string.Empty;
+        public string? Complemento { get; set; } = string.Empty;
+        public string Bairro { get; set; } = string.Empty;
+        public string Cidade { get; set; } = string.Empty;
+        public string UF { get; set; } = string.Empty;
+        public string CEP { get; set; } = string.Empty;
+        public string? Latitude { get; set; } = string.Empty;
+        public string? Longitude { get; set; } = string.Empty;
 
     }
 }

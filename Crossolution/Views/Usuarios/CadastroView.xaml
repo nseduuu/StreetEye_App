@@ -24,13 +24,33 @@
                 VerticalOptions="Center"/>
             </VerticalStackLayout>
 
-                <Entry Placeholder="ex: Eduardo Basseto" TextColor="Black" />
+                <!--Binding Usuario-->
+                <Entry Placeholder="Email:" TextColor="Black" Text="{Binding Login}"/>
 
-                <Entry Placeholder="ex: lucasfelix@crossolution" TextColor="Black" Text="{Binding Login}"/>
+                <Entry Placeholder="Senha" TextColor="Black" Text="{Binding Senha}"/>
 
-                <Entry Placeholder=" ******** " TextColor="Black" Text="{Binding Senha}"/>
+                <!--Binding Utilizador-->
+                <Entry Placeholder="Nome: " TextColor="Black" Text="{Binding Nome}"/>
 
-            <Label Text=" Estou de acordo com os termos e politica" TextColor="Black"/>
+                <Entry Placeholder="Data de nascimeto: AAAA-MM-DD" TextColor="Black" Text="{Binding Data}" />
+
+                <Entry Placeholder="Telefone: " TextColor="Black" Text="{Binding Telefone}"/>
+
+                <Entry Placeholder="Endereço: " TextColor="Black" Text="{Binding Endereco}"/>
+
+                <Entry Placeholder="Nº: " TextColor="Black" Text="{Binding NumeroEndereco}"/>
+
+                <Entry Placeholder="Complemento: " TextColor="Black" Text="{Binding Complemento}"/>
+
+                <Entry Placeholder="Bairro: " TextColor="Black" Text="{Binding Bairro}"/>
+
+                <Entry Placeholder="Cidade: " TextColor="Black" Text="{Binding Cidade}"/>
+
+                <Entry Placeholder="UF: " TextColor="Black" Text="{Binding UF}"/>
+
+                <Entry Placeholder="CEP: " TextColor="Black" Text="{Binding CEP}"/>
+            
+                <Label Text=" Estou de acordo com os termos e politica" TextColor="Black"/>
             
             <Button
             x:Name="Cadastrar"

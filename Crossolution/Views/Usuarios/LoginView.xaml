@@ -22,7 +22,7 @@
                 VerticalOptions="Center"/>
             </VerticalStackLayout>
 
-            <Entry Placeholder="ex: lucasfelix@crossolution" TextColor="Black" Text="{Binding Login}"/>
+            <Entry Placeholder="usuario@crossolution" TextColor="Black" Text="{Binding Login}"/>
 
             <Entry Placeholder=" ******** " TextColor="Black" Text="{Binding Senha}"/>
 

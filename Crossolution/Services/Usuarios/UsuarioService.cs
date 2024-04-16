@@ -8,7 +8,7 @@ namespace Crossolution.Services.Usuarios
     {
         private readonly Request _request;
 
-        private const string apiUrlBase = "streeteye-api.azurewebsites.net/Usuarios";
+        private const string apiUrlBase = "http://myprojects.somee.com/StreetEye/Usuarios";
 
         //ctor + TAB: Atalho para criar um construtor
         public UsuarioService()
