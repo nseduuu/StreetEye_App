@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Crossolution")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+8ba30ade6572b20be2fbad0d0bdfda568d399d4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+72b41b7adde2ef056a5ebd2cf90e665f678bd898")]
 [assembly: System.Reflection.AssemblyProductAttribute("Crossolution")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Crossolution")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
