@@ -12,59 +12,59 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Crossolution
-build_property.ProjectDir = D:\Lucas\Pessoal\Crossolution\Crossolution\
+build_property.ProjectDir = C:\Users\eduar\OneDrive\Área de Trabalho\Etec\TCC\StreetEye_App\Crossolution\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[D:/Lucas/Pessoal/Crossolution/Crossolution/App.xaml]
+[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[D:/Lucas/Pessoal/Crossolution/Crossolution/AppShell.xaml]
+[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[D:/Lucas/Pessoal/Crossolution/Crossolution/MainPage.xaml]
+[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[D:/Lucas/Pessoal/Crossolution/Crossolution/Resources/Styles/Colors.xaml]
+[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[D:/Lucas/Pessoal/Crossolution/Crossolution/Resources/Styles/Styles.xaml]
+[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[D:/Lucas/Pessoal/Crossolution/Crossolution/Views/Semaforos/SemaforoView.xaml]
+[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/Views/Semaforos/SemaforoView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Semaforos.SemaforoView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Semaforos\SemaforoView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Semaforos\SemaforoView.xaml
 
-[D:/Lucas/Pessoal/Crossolution/Crossolution/Views/Usuarios/CadastroView.xaml]
+[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/Views/Usuarios/CadastroView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Usuarios.CadastroView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Usuarios\CadastroView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Usuarios\CadastroView.xaml
 
-[D:/Lucas/Pessoal/Crossolution/Crossolution/Views/Usuarios/EntryView.xaml]
+[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/Views/Usuarios/EntryView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Usuarios.EntryView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Usuarios\EntryView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Usuarios\EntryView.xaml
 
-[D:/Lucas/Pessoal/Crossolution/Crossolution/Views/Usuarios/LoginView.xaml]
+[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/Views/Usuarios/LoginView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Usuarios.LoginView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Usuarios\LoginView.xaml
