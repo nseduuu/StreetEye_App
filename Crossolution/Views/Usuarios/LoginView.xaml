@@ -6,37 +6,13 @@
              Title="LoginView">
     <ScrollView>
 
-        <VerticalStackLayout Padding="25" Spacing="30" HorizontalOptions="Center">
-
-            <Image
-                Source="crossolution.png"
-                HeightRequest="150"  
-                WidthRequest="150"/>
-
-            <VerticalStackLayout>
-                <Label
-                Text="Crossolution"
-                FontSize="Medium"
-                TextColor="Black"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
-            </VerticalStackLayout>
-
-            <Entry Placeholder="usuario@crossolution" TextColor="Black" Text="{Binding Login}"/>
-
-            <Entry Placeholder=" ******** " TextColor="Black" Text="{Binding Senha}"/>
-
-
-            <Button
-            x:Name="LoginButton"
-            BackgroundColor="Black"
-            Padding="60,0,60,0"
-            Text="Login" 
-            TextColor="White"
-            Command="{Binding AutenticarCommand}"
-            HorizontalOptions="Center" />
-        
-        </VerticalStackLayout>
+        <StackLayout>
+            <Image Source="crossolution.png"></Image>
+            <Label Text="StreetEye" FontSize="Large" HorizontalOptions="Center" />
+            <Entry Placeholder="Email" Text="{Binding Email}" />
+            <Entry Placeholder="Senha" Text="{Binding Password}" IsPassword="True" />
+            <Button Text="Entrar" Command="{Binding LoginCommand}" />
+        </StackLayout>
     </ScrollView>
 
 </ContentPage>
