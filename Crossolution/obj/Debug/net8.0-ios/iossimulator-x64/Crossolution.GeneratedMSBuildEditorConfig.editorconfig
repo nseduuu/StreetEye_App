@@ -46,11 +46,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Resources.Sty
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/Views/Semaforos/SemaforoView.xaml]
+[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/Views/Responsaveis/CadastroResponsavelView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Semaforos.SemaforoView.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Semaforos\SemaforoView.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Semaforos\SemaforoView.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Responsaveis.CadastroResponsavelView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Responsaveis\CadastroResponsavelView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Responsaveis\CadastroResponsavelView.xaml
 
 [C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/Views/Usuarios/CadastroView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

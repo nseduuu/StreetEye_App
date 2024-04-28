@@ -11,6 +11,9 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="Views\Responsaveis\CadastroResponsavelView.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\Usuarios\CadastroView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -18,9 +21,6 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\Usuarios\LoginView.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Views\Semaforos\SemaforoView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>
