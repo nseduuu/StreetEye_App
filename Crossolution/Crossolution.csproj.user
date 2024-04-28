@@ -17,10 +17,10 @@
     <MauiXaml Update="Views\Usuarios\CadastroView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\Usuarios\EntryView.xaml">
+    <MauiXaml Update="Views\Usuarios\LoginView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\Usuarios\LoginView.xaml">
+    <MauiXaml Update="Views\Usuarios\ViewEntrada.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

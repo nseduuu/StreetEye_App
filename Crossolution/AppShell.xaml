@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Crossolution"
     xmlns:viewsUsuarios="clr-namespace:Crossolution.Views.Usuarios"
-    xmlns:viewsSemaforos="clr-namespace:Crossolution.Views.Semaforos"
+    xmlns:viewsResponsaveis="clr-namespace:Crossolution.Views.Responsaveis"
     BackgroundColor="White"
     Shell.FlyoutBehavior="Flyout"
     Title="Crossolution">
@@ -23,8 +23,7 @@
         ContentTemplate="{DataTemplate viewsUsuarios:LoginView}"
         Route="Login"/>
     <ShellContent
-        Title="Semaforos"
-        ContentTemplate="{DataTemplate viewsSemaforos:SemaforoView}"
-        Route="Semaforo"/>
-
+        Title="Responsaveis"
+        ContentTemplate="{DataTemplate viewsResponsaveis:CadastroResponsavelView}"
+        Route="Responsaveis"/>
 </Shell>

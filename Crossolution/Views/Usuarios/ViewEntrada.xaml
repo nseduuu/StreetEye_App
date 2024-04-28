@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Crossolution.Views.Usuarios.EntryView"
-             Title="EntryView"
-             BackgroundColor="WhiteSmoke">
+             x:Class="Crossolution.Views.Usuarios.ViewEntrada"
+             Title="ViewEntrada">
     
     <VerticalStackLayout Padding="25" Spacing="30" HorizontalOptions="Center">
 
-        <Image
-        Source="crossolution.png"
-        Margin="0,100,0,0"
-        HeightRequest="150"  
-        WidthRequest="150"/>
+        <Image Source="crossolution.png"/>
 
-        <VerticalStackLayout>
+        <StackLayout>
             <Label
             Text="Crossolution"
             FontSize="Medium"
             TextColor="Black"
             HorizontalOptions="Center"
             VerticalOptions="Center"/>
-        </VerticalStackLayout>
+        </StackLayout>
 
         <StackLayout Orientation="Vertical">
             <Button
@@ -44,5 +39,4 @@
         </StackLayout>
 
     </VerticalStackLayout>
-    
 </ContentPage>

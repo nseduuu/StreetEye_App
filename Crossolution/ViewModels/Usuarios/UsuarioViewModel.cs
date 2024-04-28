@@ -1,39 +1,49 @@
 ﻿using Crossolution.Models;
+using Crossolution.Services.Enderecos;
 using Crossolution.Services.Usuarios;
+using Crossolution.Views.Usuarios;
 using System.Windows.Input;
 
 namespace Crossolution.ViewModels.Usuarios
 {
     public class UsuarioViewModel : BaseViewModel
     {
-        //ctor + TAB + TAB: Atalho para criar o construtor
+        private readonly UsuarioService _usuarioService;
+        private readonly EnderecoService _enderecoService;
+
         public UsuarioViewModel()
         {
-            uService = new UsuarioService();
-            InicializarCommands();
-            _ = RegistrarUsuario();
+            _usuarioService = new UsuarioService();
+            _enderecoService = new EnderecoService();
+            InicializarCommads();
         }
 
-        private UsuarioService uService;
-        public ICommand AutenticarCommand { get; set; }
+        public void InicializarCommads()
+        {
+            LoginCommand = new Command(async () => await AutenticarUsuarioAsync());
+            RegistrarCommand = new Command(async () => await RegistrarUsuarioAsync());
+            GetEnderecoPorCepCommand = new Command(async () => await GetEnderecoByCepAsync());
+            DirecionarLoginCommand = new Command(async () => await NavigateToLoginAsync());
+            DirecionarCadastroCommand = new Command(async () => await NavigateToCadastroAsync());
+        }
+
+        #region Commands
+        public ICommand LoginCommand { get; set; }
         public ICommand RegistrarCommand { get; set; }
+        public ICommand GetEnderecoPorCepCommand { get; set; }
+        public ICommand DirecionarLoginCommand { get; set; }
         public ICommand DirecionarCadastroCommand { get; set; }
 
-        public void InicializarCommands()
-        {
-            AutenticarCommand = new Command(async () => await AutenticarUsuario());
-            RegistrarCommand = new Command(async () => await RegistrarUsuario());
-            DirecionarCadastroCommand = new Command(async () => await DirecionarParaCadastro());
-        }
+        #endregion
 
-
-        #region AtributosPropriedades
+        #region Properties
         //usuario
-        private string login = string.Empty;
-        private string senha = string.Empty;
+        private string email;
+        private string password;
+
         //utilizador
         private string nome = string.Empty;
-        private DateTime data;
+        private String data;
         private string telefone = string.Empty;
         private string endereco = string.Empty;
         private string numeroEndereco = string.Empty;
@@ -43,232 +53,241 @@ namespace Crossolution.ViewModels.Usuarios
         private string uf = string.Empty;
         private string cep = string.Empty;
 
-        public string Login
+        public string Email
         {
-            get => login;
+            get => email;
             set
             {
-                login = value;
-                OnPropertyChanged(Login);
+                email = value;
+                OnPropertyChanged(nameof(Email));
+            }
+        }
+        public string Password
+        {
+            get => password;
+            set
+            {
+                password = value;
+                OnPropertyChanged(nameof(Password));
             }
         }
 
-        public string Senha
+        public string Nome
         {
-            get => senha;
-            set
-            {
-                senha = value;
-                OnPropertyChanged(Senha);
-            }
-        }
-
-        public string Nome 
-        { 
             get => nome;
             set
             {
                 nome = value;
-                OnPropertyChanged(Nome);
+                OnPropertyChanged(nameof(Nome));
             }
         }
-
-        public DateTime Data 
-        { 
+        public string Data
+        {
             get => data;
             set
             {
                 data = value;
-                OnPropertyChanged(Data.ToString());
+                OnPropertyChanged(nameof(Data));
             }
         }
-
-        public string Telefone 
-        { 
+        public string Telefone
+        {
             get => telefone;
             set
             {
                 telefone = value;
-                OnPropertyChanged(Telefone);
+                OnPropertyChanged(nameof(Telefone));
             }
         }
 
-        public string Endereco 
-        { 
+        public string Endereco
+        {
             get => endereco;
             set
             {
                 endereco = value;
-                OnPropertyChanged(Endereco);
+                OnPropertyChanged(nameof(Endereco));
             }
         }
-
-        public string NumeroEndereco 
-        { 
+        public string NumeroEndereco
+        {
             get => numeroEndereco;
             set
             {
                 numeroEndereco = value;
-                OnPropertyChanged(NumeroEndereco);
+                OnPropertyChanged(nameof(NumeroEndereco));
             }
         }
-
-        public string Complemento 
-        { 
+        public string Complemento
+        {
             get => complemento;
             set
             {
                 complemento = value;
-                OnPropertyChanged(Complemento);
+                OnPropertyChanged(nameof(Complemento));
             }
         }
-
         public string Bairro
         {
             get => bairro;
             set
             {
                 bairro = value;
-                OnPropertyChanged(Bairro);
+                OnPropertyChanged(nameof(Bairro));
             }
         }
-
-        public string Cidade 
-        { 
+        public string Cidade
+        {
             get => cidade;
             set
             {
                 cidade = value;
-                OnPropertyChanged(Cidade);
+                OnPropertyChanged(nameof(Cidade));
             }
         }
-
-        public string Uf 
-        { 
+        public string Uf
+        {
             get => uf;
             set
             {
                 uf = value;
-                OnPropertyChanged(Uf);
+                OnPropertyChanged(nameof(Uf));
             }
         }
 
-        public string Cep 
-        { 
+        public string Cep
+        {
             get => cep;
             set
             {
                 cep = value;
-                OnPropertyChanged(Cep);
+                OnPropertyChanged(nameof(Cep));
             }
         }
-
         #endregion
 
-        #region Metodos
-        public async Task AutenticarUsuario()//Método para autenticar um usuário     
+        #region Methods
+        public async Task AutenticarUsuarioAsync()
         {
             try
             {
-                Usuario u = new Usuario();
-                u.Email = Login;
-                u.Password = Senha;
+                Usuario usuario = new Usuario();
+                usuario.Email = Email;
+                usuario.Password = Password;
 
-                Usuario uAutenticado = await uService.PostAutenticarUsuarioAsync(u);
+                Usuario usuarioAutenticado = await _usuarioService.PostAutenticarUsuarioAsync(usuario);
 
-                if (!string.IsNullOrEmpty(uAutenticado.Token))
+                if (!string.IsNullOrEmpty(usuarioAutenticado.Token))
                 {
-                    string mensagem = $"Bem-vindo(a) {uAutenticado.Utilizador.Nome}.";
+                    string menssagem = $"Bem vindo(a) {usuarioAutenticado.Utilizador.Nome}!";
 
-                    //Guardando dados do usuário para uso futuro
-                    Preferences.Set("Email", uAutenticado.Email);
-                    Preferences.Set("UsuarioNome", uAutenticado.Utilizador.Nome);
-                    Preferences.Set("UsuarioToken", uAutenticado.Token);
+                    Preferences.Set("UsuarioId", usuarioAutenticado.Id);
+                    Preferences.Set("UsuarioUsername", usuarioAutenticado.Utilizador.Nome);
+                    Preferences.Set("UsuarioIdUtilizador", usuarioAutenticado.Utilizador.Id);
+                    Preferences.Set("UsuarioToken", usuarioAutenticado.Token);
 
-                    await Application.Current.MainPage.DisplayAlert("Informação", mensagem, "Ok");
+                    await Application.Current.MainPage
+                        .DisplayAlert("Informações", menssagem, "Ok");
 
                     Application.Current.MainPage = new AppShell();
+
                 }
                 else
                 {
                     await Application.Current.MainPage
-                        .DisplayAlert("Informação", "Dados incorretos :(", "Ok");
+                        .DisplayAlert("Informação", "Email ou senha invalidos.", "Ok");
                 }
             }
             catch (Exception ex)
             {
                 await Application.Current.MainPage
-                    .DisplayAlert("Informação", ex.Message + " Detalhes: " + ex.InnerException, "Ok");
+                        .DisplayAlert("Informação", ex.Message + "\n" + ex.InnerException, "Ok");
             }
         }
-        public async Task RegistrarUsuario()//Método para registrar um usuário     
+
+        public async Task RegistrarUsuarioAsync()
         {
             try
             {
-                Usuario u = new Usuario();
-                Utilizador ut = new Utilizador();
-
-                u.Email = Login;
-                u.Password = Senha;
-                ut.Nome = "Ana";
-                ut.DataNascimento = DateTime.Parse("2003-08-02");
-                ut.Telefone = "994774729";
-                ut.Endereco = "Rua";
-                ut.NumeroEndereco = "123";
-                ut.Complemento = "";
-                ut.Bairro = "vila";
-                ut.Cidade = "são";
-                ut.UF = "SP";
-                ut.CEP = "02229070";
-
-                u.Utilizador = ut;
-
-                Usuario uRegistrado = await uService.PostRegistrarUsuarioAsync(u);
-
-                if (uRegistrado.IdUsuario != 0)
+                Usuario usuario = new Usuario
                 {
-                    string mensagem = $"Usuário {uRegistrado.Utilizador.Nome} registrado com sucesso.";
-                    await Application.Current.MainPage.DisplayAlert("Informação", mensagem, "Ok");
+                    Email = Email,
+                    Password = Password,
+                    Utilizador = new Utilizador()
+                    {
+                        Nome = Nome,
+                        DataNascimento = DateTime.Parse(Data),
+                        Telefone = Telefone,
+                        CEP = Cep,
+                        Endereco = Endereco,
+                        NumeroEndereco = NumeroEndereco,
+                        Complemento = Complemento,
+                        Bairro = Bairro,
+                        Cidade = Cidade,
+                        UF = Uf
+                    }
+                };
+
+                Usuario usuarioRegistrado = await _usuarioService.PostRegistrarUsuarioAsync(usuario);
+
+                if (usuarioRegistrado != null)
+                {
+                    await Application.Current.MainPage
+                        .DisplayAlert("Informações", "Usuário registrado com sucesso!", "Ok");
 
                     await Application.Current.MainPage
-                        .Navigation.PopAsync();//Remove a página da pilha de visualização
+                       .Navigation.PopAsync();
+                }
+                else
+                {
+                    await Application.Current.MainPage
+                        .DisplayAlert("Informações", "Erro ao registrar usuário.", "Ok");
                 }
             }
             catch (Exception ex)
             {
                 await Application.Current.MainPage
-                    .DisplayAlert("Informação", ex.Message + " Detalhes: " + ex.InnerException, "Ok");
+                        .DisplayAlert("Informação", ex.Message + "\n" + ex.InnerException, "Ok");
             }
         }
 
-        public async Task DirecionarParaLogin()//Método para exibição da view de Login      
+        public async Task GetEnderecoByCepAsync()
         {
             try
             {
-                await Application.Current.MainPage.
-                    Navigation.PushAsync(new Views.Usuarios.LoginView());
+                Endereco endereco = await _enderecoService.GetEnderecoByCepAsync(Cep);
+
+                if (endereco != null)
+                {
+                    Endereco = endereco.Logradouro;
+                    Bairro = endereco.Bairro;
+                    Cidade = endereco.Localidade;
+                    Uf = endereco.Uf;
+                }
+                else
+                {
+                    await Application.Current.MainPage
+                        .DisplayAlert("Informações", "CEP não encontrado.", "Ok");
+                }
             }
             catch (Exception ex)
             {
                 await Application.Current.MainPage
-                    .DisplayAlert("Informação", ex.Message + " Detalhes: " + ex.InnerException, "Ok");
+                        .DisplayAlert("Informação", ex.Message + "\n" + ex.InnerException, "Ok");
             }
         }
 
-        public async Task DirecionarParaCadastro()//Método para exibição da view de Cadastro      
-        {
-            try
-            {
-                await Application.Current.MainPage.
-                    Navigation.PushAsync(new Views.Usuarios.CadastroView());
-            }
-            catch (Exception ex)
-            {
-                await Application.Current.MainPage
-                    .DisplayAlert("Informação", ex.Message + " Detalhes: " + ex.InnerException, "Ok");
-            }
-        }
         #endregion
 
+        #region Navigation
+        public async Task NavigateToLoginAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new LoginView());
+        }
+        public async Task NavigateToCadastroAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new CadastroView());
+        }
+        #endregion
     }
 }

@@ -58,14 +58,14 @@ build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Usuario
 build_metadata.AdditionalFiles.TargetPath = Views\Usuarios\CadastroView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Usuarios\CadastroView.xaml
 
-[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/Views/Usuarios/EntryView.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Usuarios.EntryView.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Usuarios\EntryView.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Usuarios\EntryView.xaml
-
 [C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/Views/Usuarios/LoginView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Usuarios.LoginView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Usuarios\LoginView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Usuarios\LoginView.xaml
+
+[C:/Users/eduar/OneDrive/Área de Trabalho/Etec/TCC/StreetEye_App/Crossolution/Views/Usuarios/ViewEntrada.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Crossolution.Views.Usuarios.ViewEntrada.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Usuarios\ViewEntrada.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Usuarios\ViewEntrada.xaml

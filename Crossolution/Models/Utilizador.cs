@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Crossolution.Models
 {
-    public class Utilizador : Usuario
+    public class Utilizador
     {
         public int Id { get; set; }
         public string Nome { get; set; } = string.Empty;
@@ -22,5 +23,8 @@ namespace Crossolution.Models
         public string? Latitude { get; set; } = string.Empty;
         public string? Longitude { get; set; } = string.Empty;
 
+        //navigation
+        [JsonIgnore]
+        public ICollection<Usuario>? Usuarios { get; set; }
     }
 }

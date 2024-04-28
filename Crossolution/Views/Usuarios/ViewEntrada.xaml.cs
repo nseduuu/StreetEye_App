@@ -2,10 +2,10 @@ using Crossolution.ViewModels.Usuarios;
 
 namespace Crossolution.Views.Usuarios;
 
-public partial class EntryView : ContentPage
+public partial class ViewEntrada : ContentPage
 {
     UsuarioViewModel usuarioViewModel;
-    public EntryView()
+    public ViewEntrada()
 	{
 		InitializeComponent();
 

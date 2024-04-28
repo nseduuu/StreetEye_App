@@ -65,9 +65,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\Semaforos\SemaforoView.xaml.cs">
-	    <DependentUpon>SemaforoView.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="Views\Usuarios\CadastroView.xaml.cs">
 	    <DependentUpon>CadastroView.xaml</DependentUpon>
 	  </Compile>
@@ -77,16 +74,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Responsaveis\CadastroResponsavelView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Usuarios\CadastroView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Usuarios\EntryView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\Usuarios\LoginView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Semaforos\SemaforoView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

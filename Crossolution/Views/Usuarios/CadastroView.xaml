@@ -75,7 +75,7 @@
 
                 <Button Grid.Row="0" Grid.Column="1"
                     Text="Buscar CEP" BackgroundColor="Black" TextColor="White" HorizontalOptions="Center" 
-                    Command="{Binding GetEnderecoByCepCommand}"/>
+                    Command="{Binding GetEnderecoPorCepCommand}"/>
 
             </Grid>
 
